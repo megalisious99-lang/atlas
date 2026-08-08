@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-atlas-linen text-atlas-ink antialiased;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+::selection {
+  @apply bg-atlas-mist text-atlas-ink;
+}
+
+html {
+  scroll-behavior: smooth;
+}
