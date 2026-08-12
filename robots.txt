@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://atlas-cleaning.com/sitemap.xml
