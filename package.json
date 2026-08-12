@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "predeploy": "npm run export",
+    "build": "next build --webpack",
+    "export": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
