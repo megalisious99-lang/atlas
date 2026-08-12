@@ -4,17 +4,40 @@
 
 :root {
   color-scheme: light;
+  --color-champagne-gold: #D4AF37;
+  --color-matte-black: #0D0D0D;
+  --color-charcoal: #1C1C1C;
+  --color-ivory: #F5F2EB;
+  --color-forest-green: #2E3D34;
 }
 
 body {
   @apply bg-atlas-linen text-atlas-ink antialiased;
+  background-color: var(--color-ivory);
+  color: var(--color-matte-black);
+  font-family: var(--font-lato), system-ui, sans-serif;
   font-feature-settings: 'liga' 1, 'kern' 1;
 }
 
 ::selection {
-  @apply bg-atlas-mist text-atlas-ink;
+  background-color: var(--color-champagne-gold);
+  color: var(--color-matte-black);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-charcoal);
+  opacity: 0.7;
 }

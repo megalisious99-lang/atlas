@@ -6,20 +6,20 @@ export default {
     extend: {
       colors: {
         atlas: {
-          ink: '#111111',
-          smoke: '#5f6368',
-          stone: '#f4efe9',
-          linen: '#f7f3ee',
-          mist: '#e7e2da',
-          accent: '#4d5c4d'
+          ink: '#0D0D0D',
+          smoke: '#1C1C1C',
+          stone: '#F5F2EB',
+          linen: '#F5F2EB',
+          mist: '#D4AF37',
+          accent: '#2E3D34'
         }
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-pt-serif)', 'Georgia', 'serif']
+        sans: ['var(--font-lato)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'Georgia', 'serif']
       },
       boxShadow: {
-        soft: '0 18px 60px rgba(17, 17, 17, 0.08)'
+        soft: '0 18px 60px rgba(13, 13, 13, 0.10)'
       }
     }
   },

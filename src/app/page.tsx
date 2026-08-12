@@ -39,21 +39,21 @@ const process = [
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-atlas-linen text-atlas-ink">
-      <header className="sticky top-0 z-50 border-b border-atlas-mist/70 bg-[linear-gradient(180deg,rgba(176,204,191,0.38)_0%,rgba(238,232,223,0.96)_100%)] backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-atlas-mist/70 bg-atlas-ink/95 text-atlas-stone backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-col items-center px-6 py-5 lg:px-8">
           <Link href="#top" className="text-center">
-            <span className="block font-serif text-[1.5rem] font-semibold leading-none tracking-[0.36em] text-atlas-ink sm:text-[1.8rem]">
+            <span className="block font-serif text-[1.5rem] font-semibold leading-none tracking-[0.36em] text-atlas-mist sm:text-[1.8rem]">
               ATLAS
             </span>
-            <span className="mt-1 block text-[0.74rem] font-semibold uppercase tracking-[0.38em] text-atlas-smoke sm:text-[0.8rem]">
+            <span className="mt-1 block text-[0.74rem] font-semibold uppercase tracking-[0.38em] text-atlas-stone sm:text-[0.8rem]">
               Cleaning Services
             </span>
           </Link>
-          <nav className="mt-4 flex items-center justify-center gap-10 text-[0.78rem] font-medium uppercase tracking-[0.34em] text-atlas-smoke sm:gap-14 sm:text-[0.84rem]">
-            <Link href="#about" className="transition hover:text-atlas-ink">About</Link>
-            <Link href="#services" className="transition hover:text-atlas-ink">Services</Link>
-            <Link href="#book" className="transition hover:text-atlas-ink">Book</Link>
-            <Link href="#contact" className="transition hover:text-atlas-ink">Contact</Link>
+          <nav className="mt-4 flex items-center justify-center gap-10 text-[0.78rem] font-medium uppercase tracking-[0.34em] text-atlas-stone sm:gap-14 sm:text-[0.84rem]">
+            <Link href="#about" className="transition hover:text-atlas-mist">About</Link>
+            <Link href="#services" className="transition hover:text-atlas-mist">Services</Link>
+            <Link href="#book" className="transition hover:text-atlas-mist">Book</Link>
+            <Link href="#contact" className="transition hover:text-atlas-mist">Contact</Link>
           </nav>
         </div>
       </header>
@@ -68,18 +68,18 @@ export default function HomePage() {
             Atlas offers calm, meticulous cleaning for homes and offices that deserve a steadier standard.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="#book" className="inline-flex items-center gap-2 rounded-full bg-atlas-ink px-6 py-3 text-sm font-medium text-white transition hover:bg-atlas-accent">
+            <Link href="#book" className="inline-flex items-center gap-2 rounded-full bg-atlas-mist px-6 py-3 text-sm font-medium text-atlas-ink transition hover:bg-atlas-ink hover:text-atlas-stone">
               Book a Visit <ArrowRight size={16} />
             </Link>
-            <Link href="#services" className="inline-flex items-center gap-2 rounded-full border border-atlas-ink/20 px-6 py-3 text-sm font-medium text-atlas-ink transition hover:bg-white">
+            <Link href="#services" className="inline-flex items-center gap-2 rounded-full border border-atlas-mist/60 bg-atlas-stone px-6 py-3 text-sm font-medium text-atlas-ink transition hover:border-atlas-mist hover:bg-atlas-linen">
               Explore Services
             </Link>
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-atlas-mist bg-white/80 p-8 shadow-soft">
+        <div className="rounded-[2rem] border border-atlas-mist bg-atlas-stone p-8 shadow-soft">
           <div className="mb-8 flex items-center gap-3 text-sm uppercase tracking-[0.28em] text-atlas-smoke">
-            <Sparkles size={16} />
+            <Sparkles size={16} className="text-atlas-mist" />
             A quiet standard
           </div>
           <div className="space-y-5 text-sm leading-7 text-atlas-smoke">
@@ -125,8 +125,8 @@ export default function HomePage() {
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {services.map((service, index) => (
-              <div key={service.title} className="rounded-[1.5rem] border border-atlas-mist bg-white/70 p-6">
-                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-atlas-stone text-atlas-ink">
+              <div key={service.title} className="rounded-[1.5rem] border border-atlas-mist bg-atlas-stone p-6">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-atlas-linen text-atlas-mist">
                   {index === 0 ? <House size={18} /> : index === 1 ? <Building2 size={18} /> : index === 2 ? <SquarePen size={18} /> : index === 3 ? <Clock3 size={18} /> : <Sparkles size={18} />}
                 </div>
                 <h3 className="font-serif text-xl">{service.title}</h3>
@@ -138,14 +138,14 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-12 scroll-mt-24 lg:px-8 lg:py-16">
-        <div className="grid gap-8 rounded-[2rem] border border-atlas-mist bg-white/80 p-8 shadow-soft lg:grid-cols-[1fr_0.8fr] lg:p-12">
+        <div className="grid gap-8 rounded-[2rem] border border-atlas-mist bg-atlas-stone p-8 shadow-soft lg:grid-cols-[1fr_0.8fr] lg:p-12">
           <div>
             <p className="text-sm uppercase tracking-[0.32em] text-atlas-smoke">Our Standards</p>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl">The kind of care you can expect.</h2>
             <div className="mt-8 space-y-4">
               {standards.map((item) => (
                 <div key={item} className="flex gap-3 text-atlas-smoke">
-                  <BadgeCheck className="mt-1 shrink-0 text-atlas-accent" size={18} />
+                  <BadgeCheck className="mt-1 shrink-0 text-atlas-mist" size={18} />
                   <p className="text-base leading-7">{item}</p>
                 </div>
               ))}
@@ -156,7 +156,7 @@ export default function HomePage() {
             <div className="mt-6 space-y-6">
               {process.map((step, index) => (
                 <div key={step} className="flex gap-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-atlas-ink/20 text-sm font-medium text-atlas-ink">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-atlas-mist text-sm font-medium text-atlas-ink">
                     {index + 1}
                   </div>
                   <p className="text-base leading-7 text-atlas-smoke">{step}</p>
@@ -173,40 +173,40 @@ export default function HomePage() {
             <p className="text-sm uppercase tracking-[0.32em] text-atlas-smoke">Service Area</p>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Serving New York City and the surrounding neighborhoods.</h2>
             <div className="mt-8 flex items-start gap-3 text-atlas-smoke">
-              <MapPin className="mt-1 shrink-0" size={18} />
+              <MapPin className="mt-1 shrink-0 text-atlas-mist" size={18} />
               <p className="text-base leading-7">
                 Atlas serves Manhattan, Brooklyn, Queens, Nassau, Westchester, and selected Tri-State locations. If you are nearby and unsure whether we cover your address, reach out and we will confirm it directly.
               </p>
             </div>
           </div>
-          <div id="book" className="scroll-mt-24 rounded-[2rem] border border-atlas-mist bg-white/90 p-8 shadow-soft lg:p-10">
+          <div id="book" className="scroll-mt-24 rounded-[2rem] border border-atlas-mist bg-atlas-stone p-8 shadow-soft lg:p-10">
             <p className="text-sm uppercase tracking-[0.32em] text-atlas-smoke">Book</p>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Request a cleaning visit.</h2>
             <form className="mt-8 space-y-4">
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="text-sm text-atlas-smoke">
                   Name
-                  <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none" />
+                  <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50" />
                 </label>
                 <label className="text-sm text-atlas-smoke">
                   Phone
-                  <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none" />
+                  <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50" />
                 </label>
               </div>
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="text-sm text-atlas-smoke">
                   Email
-                  <input type="email" className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none" />
+                  <input type="email" className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50" />
                 </label>
                 <label className="text-sm text-atlas-smoke">
                   Address
-                  <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none" />
+                  <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50" />
                 </label>
               </div>
               <div className="grid gap-4 md:grid-cols-2">
                 <label className="text-sm text-atlas-smoke">
                   Service Type
-                  <select className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none">
+                  <select className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50">
                     <option>Residential Cleaning</option>
                     <option>Office Cleaning</option>
                     <option>Move-In / Move-Out Cleaning</option>
@@ -216,18 +216,18 @@ export default function HomePage() {
                 </label>
                 <label className="text-sm text-atlas-smoke">
                   Preferred Date
-                  <input type="date" className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none" />
+                  <input type="date" className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50" />
                 </label>
               </div>
               <label className="text-sm text-atlas-smoke">
                 Preferred Time
-                <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none" />
+                <input className="mt-2 w-full rounded-full border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50" />
               </label>
               <label className="text-sm text-atlas-smoke">
                 Message
-                <textarea rows={4} className="mt-2 w-full rounded-[1.5rem] border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none" />
+                <textarea rows={4} className="mt-2 w-full rounded-[1.5rem] border border-atlas-mist bg-atlas-linen px-4 py-3 text-atlas-ink outline-none focus:border-atlas-mist focus:ring-2 focus:ring-atlas-mist/50" />
               </label>
-              <button type="submit" className="inline-flex items-center gap-2 rounded-full bg-atlas-ink px-6 py-3 text-sm font-medium text-white transition hover:bg-atlas-accent">
+              <button type="submit" className="inline-flex items-center gap-2 rounded-full bg-atlas-mist px-6 py-3 text-sm font-medium text-atlas-ink transition hover:bg-atlas-ink hover:text-atlas-stone">
                 Send Request <ArrowRight size={16} />
               </button>
             </form>
@@ -235,15 +235,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer id="contact" className="scroll-mt-24 border-t border-atlas-mist bg-white/60">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 text-sm text-atlas-smoke lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <footer id="contact" className="scroll-mt-24 border-t border-atlas-mist bg-atlas-ink text-atlas-stone">
+        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 text-sm text-atlas-stone lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
-            <p className="font-serif text-xl text-atlas-ink">Atlas Cleaning Services</p>
+            <p className="font-serif text-xl text-atlas-mist">Atlas Cleaning Services</p>
             <p className="mt-2">Professional cleaning for homes and offices across New York City and the Tri-State Area.</p>
           </div>
           <div className="flex flex-wrap gap-6">
-            <a href="mailto:hello@atlas-cleaning.com" className="transition hover:text-atlas-ink">hello@atlas-cleaning.com</a>
-            <a href="tel:+12125550199" className="transition hover:text-atlas-ink">(212) 555-0199</a>
+            <a href="mailto:hello@atlas-cleaning.com" className="transition hover:text-atlas-mist">hello@atlas-cleaning.com</a>
+            <a href="tel:+12125550199" className="transition hover:text-atlas-mist">(212) 555-0199</a>
           </div>
         </div>
       </footer>
