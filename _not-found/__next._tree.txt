@@ -1,2 +1,2 @@
-:HL["/atlas/_next/static/css/af7932e3aa769704.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"FWB8W3wi-JZYu1eZWIT7u"}
+:HL["/atlas/_next/static/css/eaa37176bd91bc79.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"Jjq1JEZrcAFdsb8uzdLdP"}
